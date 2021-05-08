@@ -1,0 +1,77 @@
+@import "./mixings.scss";
+
+main.root {
+  @include flex-box-center(column);
+
+  width: 100vw;
+
+  padding: 100px 20px 20px;
+
+  > h1 {
+    font-size: $fontXl;
+    color: $primary;
+    margin-bottom: $space;
+  }
+}
+
+form.form__game {
+  @include flex-box-center(column, center, flex-start);
+  max-width: 300px;
+  width: 100%;
+  padding: 30px 20px;
+  border-radius: $radiusMin;
+  background: $text;
+
+  div.game__choose > .field {
+    @include flex-box-center(row, flex-start);
+
+    & + .field {
+      margin-top: $spaceSm;
+    }
+    > label {
+      color: $dark;
+      font-weight: bold;
+      font-size: $fontMd;
+      padding-right: $spaceSm / 2;
+    }
+    > input {
+      width: 15px;
+      height: 15px;
+      cursor: pointer;
+    }
+  }
+
+  > input[type="number"] {
+    @include boxFilled();
+    width: 100%;
+    margin-top: $spaceSm;
+    border: none;
+    background: lighten($text, 60%);
+
+    transition: all 0.2s ease;
+
+    &:focus {
+      box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.1);
+    }
+  }
+
+  > button[type="submit"] {
+    @include boxFilled();
+    margin-top: $spaceSm;
+    width: 100%;
+    border: none;
+    background: $primary;
+    color: $text;
+    transition: all 0.2s ease;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1.4px;
+
+    &:hover:not(:disabled, :active) {
+      background: darken($primary, 3);
+    }
+    &:active {
+      background: $dark;
+    }
+  }
+}

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="scss/main.scss" />
+    <title>Números</title>
+  </head>
+  <body>
+    <main class="root">
+      <h1>Números</h1>
+      <form class="form__game">
+        <div class="game__choose">
+          <div class="field">
+            <label for="itsEvenOrodd">Par ou Ímpar?</label>
+            <input
+              type="radio"
+              name="choose"
+              id="itsEvenOrodd"
+              value="evenOrOdd"
+            />
+          </div>
+
+          <div class="field">
+            <label for="itsPrime">É primo?</label>
+            <input type="radio" name="choose" id="itsPrime" value="prime" />
+          </div>
+
+          <div class="field">
+            <label for="itsPartOffibonacci">Está presente em Fibonacci?</label>
+            <input
+              type="radio"
+              name="choose"
+              id="itsPartOffibonacci"
+              value="fibonacci"
+            />
+          </div>
+        </div>
+
+        <input
+          type="number"
+          placeholder="Informe um número de 1 a 1000..."
+          min="1"
+          max="1000"
+          step="1"
+        />
+
+        <button type="submit">Play Game</button>
+      </form>
+    </main>
+
+    <script src="/index.js"></script>
+  </body>
+</html>
