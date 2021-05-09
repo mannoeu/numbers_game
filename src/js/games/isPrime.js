@@ -1,12 +1,18 @@
 import { SDK } from "../sdk";
 import { Selectors } from "../selectors";
+import { Injector } from "../injector";
 
 export const primeGame = {
+  response: new Injector(),
+
   start() {
-    console.log("##### É primo #####");
     const value = Selectors.inputNumber.value;
     const result = SDK.is_a_prime(value);
 
-    return console.log(`${value} ${result ? "é primo" : "não é primo"}`);
+    this.response = new Injector(
+      `${value} ${result ? "é primo" : "não é primo"}`
+    );
+
+    this.response.injectDOM();
   },
 };

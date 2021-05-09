@@ -8,7 +8,7 @@ export function validateForm(number, selectedGame) {
 
 export function getFibonacciSequence(num) {
   let value = Number(num);
-  if (value <= 1) return 1;
+  if (value <= 1) return true;
 
   return getFibonacciSequence(value - 1) + getFibonacciSequence(value - 2);
 }

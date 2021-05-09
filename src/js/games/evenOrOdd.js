@@ -1,12 +1,23 @@
 import { SDK } from "../sdk";
 import { Selectors } from "../selectors";
+import { Injector } from "../injector";
 
 export const evenOrOddGame = {
+  response: new Injector(),
+
   start() {
-    console.log("##### Par ou ímpar #####");
     const value = Selectors.inputNumber.value;
     const result = SDK.is_an_even_or_odd(value);
 
-    return console.log(`${value} é ${result ? "par" : "ímpar"}`);
+    if (
+      typeof result === "object" &&
+      result?.error === "Value must be a number"
+    ) {
+      this.response.setMessage(`${value} não ímpar nem par.`);
+    } else {
+      this.response.setMessage(`${value} é ${result ? "par" : "ímpar"}`);
+    }
+
+    this.response.injectDOM();
   },
 };

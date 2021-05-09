@@ -10,7 +10,17 @@ main.root {
   > h1 {
     font-size: $fontXl;
     color: $primary;
+  }
+  > p.game__result {
     margin-bottom: $space;
+    color: $text;
+    max-width: 290px;
+    width: 100%;
+    text-align: center;
+    line-height: calc($fontSm + 10px);
+    text-transform: uppercase;
+    letter-spacing: 1.4px;
+    font-size: $fontSm;
   }
 }
 

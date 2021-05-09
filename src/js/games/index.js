@@ -1,6 +1,6 @@
-import { evenOrOddGame } from "./games/evenOrOdd";
-import { primeGame } from "./games/isPrime";
-import { fibonacciGame } from "./games/fibonacci";
+import { evenOrOddGame } from "./evenOrOdd";
+import { primeGame } from "./isPrime";
+import { fibonacciGame } from "./fibonacci";
 
 export const Games = {
   evenOrOdd() {
