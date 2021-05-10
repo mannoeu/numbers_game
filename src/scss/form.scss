@@ -17,7 +17,7 @@ main.root {
     max-width: 290px;
     width: 100%;
     text-align: center;
-    line-height: calc($fontSm + 10px);
+    line-height: $fontSm + 1rem;
     text-transform: uppercase;
     letter-spacing: 1.4px;
     font-size: $fontSm;
