@@ -12,3 +12,7 @@ export function getFibonacciSequence(num) {
 
   return getFibonacciSequence(value - 1) + getFibonacciSequence(value - 2);
 }
+
+export function restOfDivision(dividend, divider) {
+  return Number(dividend) % Number(divider);
+}

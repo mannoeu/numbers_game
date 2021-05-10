@@ -52,11 +52,16 @@ form.form__game {
   }
 
   > input[type="number"] {
+    &:invalid {
+      border-color: $primary;
+    }
+
     @include boxFilled();
     width: 100%;
     margin-top: $spaceSm;
     border: none;
     background: lighten($text, 60%);
+    border: 1px solid $text;
 
     transition: all 0.2s ease;
 

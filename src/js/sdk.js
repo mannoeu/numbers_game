@@ -1,4 +1,4 @@
-import { getFibonacciSequence } from "../utils";
+import { getFibonacciSequence, restOfDivision } from "../utils";
 
 export const SDK = {
   is_a_prime(number) {
@@ -27,7 +27,7 @@ export const SDK = {
       };
     }
 
-    return Number(number) % 2 === 0;
+    return restOfDivision(value, 2) === 0;
   },
 
   is_part_of_fibonacci(number) {
@@ -52,5 +52,28 @@ export const SDK = {
     }
 
     return find;
+  },
+  is_multiple_of_4(maxNum) {
+    let value = Number(maxNum);
+
+    if (!value) {
+      return {
+        error: "Value must be a number",
+      };
+    }
+
+    let increment = [];
+
+    for (let i = 2; i <= value; i++) {
+      let rest = restOfDivision(i, 4);
+
+      if (rest === 0) {
+        increment.push("pin");
+      } else {
+        increment.push(i);
+      }
+    }
+
+    return increment;
   },
 };
