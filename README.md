@@ -1,4 +1,4 @@
-## Challeng
+## 1 Challenge
 You must create a simple application, with 4 different implementation of “Numbers” using HTML, Sass and JavaScript, and a Jsfiddle tool. 
 The user must have an option to choose between the 4 implementations (versions of the game), enter a number from 1 to 1000.
 Your application, then, must display the result of all implementations to the user. For this task, you must use at least two of the SOLID principles.
@@ -11,7 +11,7 @@ Your application, then, must display the result of all implementations to the us
 
 4 - Show the sequence of numbers where multiples of 4 use the word “pin”.
 
-## 5 How to run
+## 2 How to run
 
 Navigate to the root of the project and install the dependencies
 ```
